@@ -1,5 +1,24 @@
 {
   "name": "twitter-app",
   "private": true,
-  "dependencies": {}
+  "engines": {
+    "node": "11.6.0"
+  },
+  "description": "This application can be used to search through recent tweets using the Twitter API. I chose to make this application because I wanted a chance to get to build something using Twitter API, which can be a powerful tool to include in applications to enhance user interaction. Additionally, displaying large numbers of tweets and managing application state is a great use case for React, and with the latest version including Hooks, it was a chance to get up to date on the latest features.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "build": "yarn --cwd client install && yarn --cwd client build",
+    "deploy": "cp -a client/build/. public/",
+    "heroku-postbuild": "yarn build && yarn deploy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bsutt123/kon-twitter-search.git"
+  }
 }
